@@ -5,7 +5,7 @@ const app = express();
 
 
 const port = process.env.PORT || 8080;
-app.get('/', require('./routes'));
+app.use('/', require('./routes'));
 
 
 mongodb.initDb((err, mongodb) => {
