@@ -4,6 +4,6 @@ router.get("/", (req, res) => {
     res.send("Welcome to the Contacts API");
 });
 
-router.use('/contact', require('./contact')); // Loads contact-related routes
+router.use('/contact', require('./contact')); 
 
 module.exports = router;
