@@ -87,15 +87,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Adetabanat/CSE-341-projec1.git"
+    "url": "git+https://github.com/Adetabanat/CSE-341-project1.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Adetabanat/CSE-341-projec1/issues"
+    "url": "https://github.com/Adetabanat/CSE-341-project1/issues"
   },
-  "homepage": "https://github.com/Adetabanat/CSE-341-projec1#readme",
+  "homepage": "https://github.com/Adetabanat/CSE-341-project1#readme",
   "devDependencies": {},
   "description": ""
 }
