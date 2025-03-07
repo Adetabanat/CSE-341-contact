@@ -72,6 +72,8 @@
     "side-channel-weakmap": "^1.0.2",
     "sparse-bitfield": "^3.0.3",
     "statuses": "^2.0.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "toidentifier": "^1.0.1",
     "tr46": "^5.0.0",
     "type-is": "^1.6.18",
@@ -96,6 +98,8 @@
     "url": "https://github.com/Adetabanat/CSE-341-project1/issues"
   },
   "homepage": "https://github.com/Adetabanat/CSE-341-project1#readme",
-  "devDependencies": {},
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "swagger-autogen": "^2.23.7"
+  }
 }
