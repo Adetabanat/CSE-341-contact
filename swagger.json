@@ -5,9 +5,10 @@
     "description": "Contact API",
     "version": "1.0.0"
   },
-  "host": "cse-341-project1-r42m.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "paths": {
@@ -21,7 +22,16 @@
         }
       }
     },
-  
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/contact/": {
       "get": {
         "description": "",
