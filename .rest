@@ -10,8 +10,8 @@ Content-Type: application/json
 
 {
     "firstName": "daniel",
-    "lastName": "Doe",
-    "email": "john.doe@example.com",
+    "lastName": "kwame",
+    "email": "kwwamedan@example.com",
     "favoriteColor": "Blue",
     "birthday": "1990-01-01"
 }
@@ -21,12 +21,12 @@ PUT http://localhost:8080/contact/67c8b7b96d82ca5d7ef65de9 HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "daniel",
-    "lastName": "Doe",
-    "email": "danielnat@example.com",
-    "favoriteColor": "red",
-    "birthday": "1995-02-15"
+    "firstName": "Pat",
+    "lastName": "Earth",
+    "email": "PatEarth@example.com",
+    "favoriteColor": "blue",
+    "birthday": "1995-07-15"
 }
 
 ### Delete a contact
-DELETE http://localhost:8080/contact/67c8b7b96d82ca5d7ef65deb HTTP/1.1
+DELETE http://localhost:8080/contact/67cc5a2172e70dfd501d7d03 HTTP/1.1
