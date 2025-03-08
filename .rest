@@ -23,8 +23,8 @@ Content-Type: application/json
 {
     "firstName": "daniel",
     "lastName": "Doe",
-    "email": "jane.doe@example.com",
-    "favoriteColor": "Green",
+    "email": "danielnat@example.com",
+    "favoriteColor": "red",
     "birthday": "1995-02-15"
 }
 

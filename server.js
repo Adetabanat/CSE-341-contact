@@ -6,19 +6,25 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // Middleware
-app.use(bodyParser.json());  // Parses JSON body
-app.use(bodyParser.urlencoded({ extended: true })); // Parses URL-encoded data
+app.use(bodyParser.json()); // Parses JSON body
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Z-Key');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+});
 
 // Routes
 app.use('/', require('./routes'));
 
 // Connect to MongoDB and Start Server
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
     if (err) {
         console.log(err);
     } else {
         app.listen(port, () => {
-            console.log(`Connected to DB and listening on ${port}`);
+            console.log(`Connected to DB and listening on port ${port}`);
         });
     }
 });
