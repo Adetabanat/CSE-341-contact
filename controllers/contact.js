@@ -8,7 +8,7 @@ const getAll = async (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(result);
     } catch (error) {
-        res.status(500).json({ message: 'Error fetching contacts', error });
+        res.status(500).json({ message: 'Error fetching  the contacts', error });
     }
 };
 

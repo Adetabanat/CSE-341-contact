@@ -3,7 +3,7 @@ const router = require('express').Router();
 router.use('/', require('./swagger'));
 
 router.get("/", (req, res) => {
-    res.send("Welcome to the Contacts API");
+    res.send("Welcome to my Contacts API");
 });
 
 router.use('/contact', require('./contact'));

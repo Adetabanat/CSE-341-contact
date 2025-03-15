@@ -8,6 +8,7 @@
   "host": "cse-341-project1-r42m.onrender.com",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "paths": {
@@ -21,7 +22,16 @@
         }
       }
     },
-  
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/contact/": {
       "get": {
         "description": "",
