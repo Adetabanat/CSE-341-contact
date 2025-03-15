@@ -1,6 +1,6 @@
 [
     {
-      "firstName": "John",
+      "firstName": "Jon",
       "lastName": "Doe",
       "email": "johndoe@example.com",
       "favoriteColor": "blue",
@@ -14,7 +14,7 @@
       "birthday": "1985-10-25"
     },
     {
-      "firstName": "Michael",
+      "firstName": "Mic",
       "lastName": "Johnson",
       "email": "michaelj@example.com",
       "favoriteColor": "red",
