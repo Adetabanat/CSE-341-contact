@@ -29,6 +29,7 @@ const getSingle = async (req, res) => {
     }
 };
 
+
 // 🟠 Create a New Contact (POST)
 const createContact = async (req, res) => {
     try {
@@ -37,6 +38,11 @@ const createContact = async (req, res) => {
             return res.status(400).json({ message: 'All fields are required' });
         }
 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ message: 'Invalid email format' });
+        }
+    
         const newContact = { firstName, lastName, email, favoriteColor, birthday };
         const result = await mongodb.getDatabase().db().collection('contact').insertOne(newContact);
 
@@ -55,7 +61,11 @@ const updateContact = async (req, res) => {
         if (!firstName || !lastName || !email || !favoriteColor || !birthday) {
             return res.status(400).json({ message: 'All fields are required' });
         }
-
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ message: 'Invalid email format' });
+        }
+        
         const updatedContact = { firstName, lastName, email, favoriteColor, birthday };
         const result = await mongodb.getDatabase().db().collection('contact').updateOne(
             { _id: userId },

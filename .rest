@@ -17,13 +17,13 @@ Content-Type: application/json
 }
 
 ### Update a contact
-PUT http://localhost:8080/contact/67c8b7b96d82ca5d7ef65de9 HTTP/1.1
+PUT http://localhost:8080/contact/67cc1b7d06649148b971ef77 HTTP/1.1
 Content-Type: application/json
 
 {
     "firstName": "Pat",
     "lastName": "Earth",
-    "email": "PatEarth@example.com",
+    "email": "PatEarth",
     "favoriteColor": "blue",
     "birthday": "1995-07-15"
 }
