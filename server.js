@@ -1,30 +1,20 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const mongodb = require('./data/database');
-
 const app = express();
-const port = process.env.PORT || 8080;
+const { initDb } = require('./data/database'); // Import your DB initialization function
 
-// Middleware
-app.use(bodyParser.json()); // Parses JSON body
+const port = process.env.PORT || 3000;
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Z-Key');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    next();
-});
+(async () => {
+  try {
+    // Initialize the database
+    await initDb();
 
-// Routes
-app.use('/', require('./routes'));
-
-// Connect to MongoDB and Start Server
-mongodb.initDb((err) => {
-    if (err) {
-        console.log(err);
-    } else {
-        app.listen(port, () => {
-            console.log(`Connected to DB and listening on port ${port}`);
-        });
-    }
-});
+    // Start the server after DB initialization
+    app.listen(port, () => {
+      console.log(`🚀 Server is running on http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.error('❌ Failed to initialize the database:', error); // ✅ Match 'error'
+    process.exit(1); // Exit the process with an error code if DB initialization fails
+  }
+})();

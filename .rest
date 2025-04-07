@@ -1,32 +1,31 @@
-### Get all contacts
-GET http://localhost:8080/contact HTTP/1.1
+### Get all users
+GET http://localhost:3000/users
+Accept: application/json
 
-### Get a single contact
-GET http://localhost:8080/contact/67c8b7b96d82ca5d7ef65de7 HTTP/1.1
+### Get a user by ID
+GET http://localhost:3000/users/60d2b8e4bcd4f325b8d3f5f8
+Accept: application/json
 
-### Create a new contact
-POST http://localhost:8080/contact HTTP/1.1
+### Create a new user
+POST http://localhost:3000/users
 Content-Type: application/json
-
 {
-    "firstName": "daniel",
-    "lastName": "kofi",
-    "email": "kwwamedan@example.com",
-    "favoriteColor": "Blue",
-    "birthday": "1990-01-01"
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "password": "password123"
 }
 
-### Update a contact
-PUT http://localhost:8080/contact/67cc1b7d06649148b971ef77 HTTP/1.1
+### Update an existing user
+PUT http://localhost:3000/users/60d2b8e4bcd4f325b8d3f5f8
 Content-Type: application/json
-
 {
-    "firstName": "Pat",
-    "lastName": "Earth",
-    "email": "PatEarth",
-    "favoriteColor": "blue",
-    "birthday": "1995-07-15"
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane.doe@example.com",
+  "password": "newpassword123"
 }
 
-### Delete a contact
-DELETE http://localhost:8080/contact/67cc5a2172e70dfd501d7d03 HTTP/1.1
+### Delete a user
+DELETE http://localhost:3000/users/60d2b8e4bcd4f325b8d3f5f8
+Accept: application/json
