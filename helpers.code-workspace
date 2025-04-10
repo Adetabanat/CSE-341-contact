@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "helpers",
+			"path": "../CSE341-Student/helpers"
+		},
+		{
+			"name": "CSE-341-contact",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
